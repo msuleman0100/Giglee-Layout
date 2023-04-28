@@ -18,10 +18,23 @@ class LoginController: UIViewController {
         
     }
     
-    @IBAction func loginBtnTapped() {
+    
+    @IBAction func loginTapped(_ sender: Any) {
+    
+        let isLogin1 = UserDefaults.standard.bool(forKey: "loggedIn")
+        print("\nState before login -> \(String(describing: isLogin1))")
         
-        print("\nEmail -> \(email.text)")
-        print("Passwordd -> \(password.text)")
+        UserDefaults.standard.set(true, forKey: "loggedIn")
+        
+        let isLogin2 = UserDefaults.standard.bool(forKey: "loggedIn")
+        print("\nState after login -> \(String(describing: isLogin2))")
+        
+        //Goto login screen
+        
+        let storyboard = UIStoryboard(name: "HomeView", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeController") as! HomeController
+        self.navigationController?.pushViewController(vc, animated: true)
+    
     }
     
     @IBAction func registerBtnTapped() { }
