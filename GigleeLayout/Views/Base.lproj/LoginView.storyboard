@@ -4,14 +4,15 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GigleeLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="GigleeLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="40" id="vzH-52-j92"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
-                                <color key="textColor" red="0.97980173299999995" green="1" blue="0.98877703709999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xLo-xD-Zwj">
@@ -63,11 +64,11 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.082764503901831793" green="0.5037462563300138" blue="0.95904105900000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.082352941176470587" green="0.50196078431372548" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="24"/>
-                                    <color key="baseForegroundColor" red="0.97980173299999995" green="1" blue="0.98877703709999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseForegroundColor" name="textColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginBtnTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAh-Nj-mBM"/>
@@ -112,7 +113,7 @@
                                         <color key="strokeColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="24"/>
-                                    <color key="baseForegroundColor" red="0.97980173299999995" green="1" blue="0.98877703709999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseForegroundColor" name="textColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="registerBtnTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zxi-XP-DZI"/>
@@ -120,7 +121,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.41566073557601996" green="0.41517666838064793" blue="0.63294320154671713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="XGl-H9-Qvn" firstAttribute="top" secondItem="puT-8z-Aoz" secondAttribute="bottom" constant="12" id="1Kr-hz-Cxh"/>
                             <constraint firstItem="3La-mP-gFN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="1LX-W8-Xri"/>
@@ -164,5 +165,8 @@
     <resources>
         <image name="arrow.forward" catalog="system" width="128" height="95"/>
         <image name="logo" width="602" height="414"/>
+        <namedColor name="textColor">
+            <color red="0.99998217820000002" green="1" blue="0.99607783559999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
