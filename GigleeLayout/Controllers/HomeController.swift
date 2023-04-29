@@ -9,32 +9,38 @@ import UIKit
 
 class HomeController: UIViewController {
     
+    
+    @IBOutlet weak var currentUser: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        fetchUserData()
     }
     
-    @IBAction func logoutBtnTapped() {
-        
-        let isLogin1 = UserDefaults.standard.bool(forKey: "loggedIn")
-        print("\nState before logout -> \(String(describing: isLogin1))")
-        
-        UserDefaults.standard.set(false, forKey: "loggedIn")
-        
-        let isLogin2 = UserDefaults.standard.bool(forKey: "loggedIn")
-        print("\nState after logout -> \(String(describing: isLogin2))")
-        
-        // Go back....
-//        navigationController?.popViewController(animated: true)
-       
+    private func fetchUserData() {
+        if let data = UserDefaults.standard.object(forKey: "loggedIn") as? Data,
+           let user = try? JSONDecoder().decode(UserModel.self, from: data) {
+            currentUser.text = user.email
+        }
     }
-
+    
     
     @IBAction func logoutTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "LoginView", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+        
+        //Logout User
+        UserDefaults.standard.removeObject(forKey: "loggedIn")
+        //Goto LoginView
+        let storyboard = UIStoryboard(name: "AuthView", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginView") as! AuthController
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func ForgotPassBtnTappeed(_ sender: Any) {
+        print("helloo")
+    }
+    
+    @IBAction func ForgotPassBtnTappeedAgain(_ sender: Any) {
+    }
+    
     
 }
