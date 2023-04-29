@@ -24,14 +24,16 @@ class AuthController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
 
         if email.text == "" || password.text == ""  {
+            let alertView = PopupView()
+            alertView.appear(sender: self)
             print("\nEnter email address and password to continue....")
         } else {
-            
+
             //Save user
             let enteredEmail = email.text!
             let user = UserModel(email: enteredEmail, isLoggedIn: true)
             addUserDefaults(user)
-            
+
             //Goto MainView
             let storyboard = UIStoryboard(name: "MainView", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "HomeView") as! HomeController
@@ -42,6 +44,8 @@ class AuthController: UIViewController {
     @IBAction func registerBtnTapped() { }
     
     @IBAction func forgotPaassBtnTapped() { }
+    
+    
     
 }
 

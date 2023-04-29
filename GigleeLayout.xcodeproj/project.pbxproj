@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185EF26429FD2FFA009CCFA6 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EF26229FD2FFA009CCFA6 /* PopupView.swift */; };
+		185EF26529FD2FFA009CCFA6 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185EF26329FD2FFA009CCFA6 /* PopupView.xib */; };
 		187848B029FB816C00FC5A5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187848AF29FB816C00FC5A5F /* AppDelegate.swift */; };
 		187848B429FB816C00FC5A5F /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187848B329FB816C00FC5A5F /* AuthController.swift */; };
 		187848B729FB816C00FC5A5F /* AuthView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187848B529FB816C00FC5A5F /* AuthView.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185EF26229FD2FFA009CCFA6 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		185EF26329FD2FFA009CCFA6 /* PopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
 		187848AC29FB816C00FC5A5F /* GigleeLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigleeLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187848AF29FB816C00FC5A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		187848B329FB816C00FC5A5F /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
@@ -62,9 +66,9 @@
 		187848AE29FB816C00FC5A5F /* GigleeLayout */ = {
 			isa = PBXGroup;
 			children = (
-				18E4458229FCE2AE00D48C4F /* Models */,
 				187848C429FB934400FC5A5F /* Controllers */,
 				187848C329FB933B00FC5A5F /* Views */,
+				18E4458229FCE2AE00D48C4F /* Models */,
 				187848AF29FB816C00FC5A5F /* AppDelegate.swift */,
 				18E4454629FCCC7D00D48C4F /* SceneDelegate.swift */,
 				187848B829FB816E00FC5A5F /* Assets.xcassets */,
@@ -88,6 +92,8 @@
 			children = (
 				187848B329FB816C00FC5A5F /* AuthController.swift */,
 				18A999A129FBEC25008D07C4 /* HomeController.swift */,
+				185EF26229FD2FFA009CCFA6 /* PopupView.swift */,
+				185EF26329FD2FFA009CCFA6 /* PopupView.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			files = (
 				187848BC29FB816E00FC5A5F /* LaunchScreen.storyboard in Resources */,
 				187848B929FB816E00FC5A5F /* Assets.xcassets in Resources */,
+				185EF26529FD2FFA009CCFA6 /* PopupView.xib in Resources */,
 				18A999A029FBEBDE008D07C4 /* MainView.storyboard in Resources */,
 				187848B729FB816C00FC5A5F /* AuthView.storyboard in Resources */,
 			);
@@ -172,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185EF26429FD2FFA009CCFA6 /* PopupView.swift in Sources */,
 				18E4454729FCCC7D00D48C4F /* SceneDelegate.swift in Sources */,
 				187848B429FB816C00FC5A5F /* AuthController.swift in Sources */,
 				187848B029FB816C00FC5A5F /* AppDelegate.swift in Sources */,
